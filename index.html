@@ -16,19 +16,24 @@
 <body class="font-poppins">
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- home screen -->
-        <section class="home min-h-screen text-white flex  justify-center items-center hidden">
+        <section class="home min-h-screen text-white flex  justify-center items-center">
               <div class="flex flex-col items-center gap-10">
-                <h1 class="text-7xl font-anton uppercase">Alpha Clash Pro</h1>
+                <h1 class="text-8xl font-anton uppercase">Alpha Clash Pro</h1>
               <p>Unleash Your Keyboard Kun g Fu : Press "Enter" to Play</p>
-              <button class="btn bg-white text-black">Play Now</button>
+              <button onclick="play()" class="btn bg-white text-black">Play Now</button>
               </div>
         </section>
         <!-- play ground  start-->
-        <section class="play-ground">
-            <div>
+        <section class="play-ground hidden">
+            <div class="flex flex-col items-center gap-20 pt-20">
                 <!-- screen -->
                 <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]">
-                    1024×320
+                    <div class="flex justify-center">
+                    <p class="bg-[#2F2942] px-6 pb-6 text-white rounded-b-xl">Don't watch Keyboard while playing...</p>
+                    </div>
+                    <div class="flex justify-center place-items-center h-full">
+                        <p class="text-balck text-9xl font-bold">Y</p>
+                    </div>
                     </div>
                 <!-- keyboard start -->
                 <div>
@@ -68,12 +73,35 @@
                 </div>
                 <!-- keyboard end -->
                 <!-- life score -->
+                <div class="flex justify-between w-1/2">
+                    <button class="btn rounded-full bg-purple-700 text-white px-4">
+                        Life
+                        <img src="images/heart.svg" alt="">
+                        <span>1</span>
+                      </button>
+                      <button class="btn rounded-full bg-purple-700 text-white px-4">
+                        Score
+                        <img src="images/dollar.svg" alt="">
+                        <span>1</span>
+                      </button>
+                </div>
             </div>
         </section>
     <!-- play ground end -->
-        <section class="Score">
+    <!-- final score start -->
+        <section class="Score flex justify-center items-center min-h-screen hidden">
+            <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
+                <h1 class="text-7xl">
+                    <span class="font-extrabold">Score:</span>
+                    <span>14</span>
+                </h1>
+                <button class="btn">Play Again</button>
+                <p>Practice will make you a pro</p>
+            </div>
     
         </section>
-    </body>
     </main>
+    <script src="scripts/alpha-clash.js"></script>
+    </body>
+    
 </html>
